@@ -1,0 +1,25 @@
+﻿.hero {
+  padding: 4rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  background: linear-gradient(145deg, #fffaf5, #f7efe8);
+  
+  .hero-text {
+    flex: 1 1 350px;
+    p { font-size: 1.3rem; margin: 1.5rem 0; }
+  }
+  
+  .hero-image {
+    flex: 1 1 320px;
+    img { max-width: 100%; border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%; }
+  }
+  
+  .floral-divider {
+    width: 130px;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, $color-floral-pink 0px, $color-floral-pink 8px, transparent 8px, transparent 16px);
+    margin: 20px 0;
+  }
+}

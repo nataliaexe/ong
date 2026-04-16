@@ -1,0 +1,11 @@
+﻿@mixin mobile { @media (max-width: $mobile) { @content; } }
+@mixin button-base {
+  border-radius: 60px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}

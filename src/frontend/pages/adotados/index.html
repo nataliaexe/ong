@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adotados | FlorAnimal</title>
+    <meta name="description" content="Album de historias felizes dos animais adotados pela FlorAnimal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a class="brand" href="/"><i class="fa-solid fa-seedling"></i> FlorAnimal</a>
+        <nav class="nav">
+            <a href="/">Inicio</a>
+            <a href="/pages/adotar/">Adotar</a>
+            <a href="/pages/ajudar/">Ajudar</a>
+            <a href="/pages/adotados/" aria-current="page">Adotados</a>
+            <a href="/pages/admin/">Admin</a>
+        </nav>
+    </header>
+    <main class="shell">
+        <section class="hero" data-reveal>
+            <span class="eyebrow">Album de adotados</span>
+            <h1>Paginas de afeto, antes e depois, memoria e lar.</h1>
+            <p>Agora as historias de adotados tambem vem do backend. O que for publicado no admin aparece aqui automaticamente.</p>
+        </section>
+        <section class="book" data-reveal id="storiesBook"></section>
+    </main>
+    <script type="module" src="./page.js"></script>
+</body>
+</html>

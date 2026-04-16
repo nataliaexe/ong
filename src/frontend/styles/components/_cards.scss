@@ -1,0 +1,10 @@
+﻿.animal-card {
+  background: white;
+  border-radius: 32px;
+  padding: 1.8rem;
+  box-shadow: 0 20px 30px -8px rgba(90, 70, 60, 0.08);
+  text-align: center;
+  transition: transform 0.3s;
+  &:hover { transform: translateY(-8px); }
+  .animal-icon { font-size: 3.8rem; margin-bottom: 15px; }
+}

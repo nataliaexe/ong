@@ -1,0 +1,16 @@
+﻿.btn-primary {
+  @include button-base;
+  background: $color-floral-pink;
+  color: $color-text;
+  padding: 14px 36px;
+  box-shadow: 0 12px 20px -8px rgba(247, 161, 196, 0.5);
+  &:hover { background: #fbb6d2; }
+}
+.btn-outline {
+  @include button-base;
+  background: transparent;
+  border: 2px solid $color-floral-green;
+  color: $color-green-deep;
+  padding: 12px 30px;
+  &:hover { background: $color-floral-green; color: white; }
+}

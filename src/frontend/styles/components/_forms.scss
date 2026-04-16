@@ -1,0 +1,9 @@
+﻿input, textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid #e1cdc0;
+  border-radius: 40px;
+  font-family: $font-primary;
+  margin-bottom: 15px;
+  &:focus { border-color: $color-floral-pink; outline: none; }
+}

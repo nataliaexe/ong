@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adotar | FlorAnimal</title>
+    <meta name="description" content="Animais disponiveis para adocao responsavel na FlorAnimal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="page-loader" data-loader>
+        <div class="page-loader__dots"><span></span><span></span><span></span><span></span></div>
+        <p>Preparando as historias de adocao</p>
+    </div>
+
+    <div class="cat-cursor" data-cursor aria-hidden="true"><span>🐱</span></div>
+
+    <header class="page-header">
+        <a class="page-brand" href="/"><i class="fa-solid fa-seedling"></i> FlorAnimal</a>
+        <nav class="page-nav" aria-label="Principal">
+            <a href="/">Inicio</a>
+            <a href="/pages/adotar/" aria-current="page">Adotar</a>
+            <a href="/pages/ajudar/">Ajudar</a>
+            <a href="/pages/adotados/">Adotados</a>
+            <a href="/pages/admin/">Admin</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="hero" data-reveal>
+            <div>
+                <span class="eyebrow">Adocao responsavel</span>
+                <h1>Encontre um companheiro que combine com a sua rotina.</h1>
+                <p>Agora esta pagina puxa os animais direto do backend. Tudo que voce cadastrar no admin ja aparece aqui automaticamente.</p>
+            </div>
+            <aside class="hero-card">
+                <strong>Fluxo ideal</strong>
+                <p>1. Filtrar perfil do animal. 2. Ler detalhes. 3. Enviar interesse. 4. ONG avalia e faz contato.</p>
+            </aside>
+        </section>
+
+        <section class="filters" data-reveal>
+            <button class="filter-chip is-active" type="button" data-filter="todos">Todos</button>
+            <button class="filter-chip" type="button" data-filter="dog">Caes</button>
+            <button class="filter-chip" type="button" data-filter="cat">Gatos</button>
+            <button class="filter-chip" type="button" data-filter="urgent">Urgentes</button>
+            <button class="filter-chip" type="button" data-filter="filhote">Filhotes</button>
+        </section>
+
+        <section class="pet-grid" id="petGrid"></section>
+        <p class="empty-state" id="emptyState" hidden>Nenhum animal corresponde a esse filtro no momento.</p>
+
+        <section class="interest" data-reveal>
+            <div class="section-head">
+                <span class="eyebrow">Formulario de interesse</span>
+                <h2>Quero conversar sobre adocao</h2>
+            </div>
+            <form class="interest-form">
+                <label>
+                    <span>Nome</span>
+                    <input type="text" placeholder="Seu nome completo">
+                </label>
+                <label>
+                    <span>Telefone</span>
+                    <input type="tel" placeholder="(11) 99999-9999">
+                </label>
+                <label>
+                    <span>Animal de interesse</span>
+                    <select id="animalInterest"></select>
+                </label>
+                <label class="full">
+                    <span>Conte um pouco sobre sua rotina</span>
+                    <textarea placeholder="Fale sobre casa, tempo disponivel, telas, quintal e experiencia com pets."></textarea>
+                </label>
+                <button class="primary-btn" type="button">Enviar interesse</button>
+            </form>
+        </section>
+    </main>
+
+    <script type="module" src="./page.js"></script>
+</body>
+</html>

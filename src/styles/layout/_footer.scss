@@ -1,0 +1,29 @@
+footer {
+  background: #2b3a26;
+  color: #f0e7dd;
+  padding: 2.5rem 5%;
+  text-align: center;
+  border-top: 6px solid $color-floral-pink;
+
+  .footer-floral {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin: 25px 0;
+    font-size: 1.6rem;
+  }
+
+  .footer-title {
+    // estilos já definidos
+  }
+
+  .footer-quote {
+    margin-top: 16px;
+    opacity: 0.8;
+  }
+
+  .copyright {
+    margin-top: 25px;
+    font-size: 0.9rem;
+  }
+}

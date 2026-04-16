@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Margarida",
+    "type": "dog",
+    "ageLabel": "2 anos",
+    "size": "medio",
+    "gender": "femea",
+    "status": "available",
+    "description": "Carinhosa, calma e companheira de fim de tarde.",
+    "tags": ["cao", "medio", "castrada"],
+    "coverVariant": "margarida"
+  },
+  {
+    "id": 2,
+    "name": "Jasmim",
+    "type": "cat",
+    "ageLabel": "1 ano",
+    "size": "pequeno",
+    "gender": "femea",
+    "status": "available",
+    "description": "Curiosa, brincalhona e ideal para apartamento com telas.",
+    "tags": ["gato", "vacinada", "apartamento"],
+    "coverVariant": "jasmim"
+  },
+  {
+    "id": 3,
+    "name": "Tomilho",
+    "type": "dog",
+    "ageLabel": "3 anos",
+    "size": "medio",
+    "gender": "macho",
+    "status": "urgent",
+    "description": "Ama passeios e responde super bem a rotina e comando.",
+    "tags": ["cao", "medio", "ativo"],
+    "coverVariant": "tomilho"
+  },
+  {
+    "id": 4,
+    "name": "Lavanda",
+    "type": "cat",
+    "ageLabel": "4 meses",
+    "size": "pequeno",
+    "gender": "femea",
+    "status": "available",
+    "description": "Filhote curiosa, afetuosa e perfeita para um lar paciente.",
+    "tags": ["gato", "filhote", "socializacao"],
+    "coverVariant": "lavanda"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Luna",
+    "title": "Chegou assustada e agora dorme no sofa",
+    "summary": "Ganhou tempo de adaptacao e hoje acompanha a familia em todas as viagens.",
+    "adoptionDate": "2025-08-14",
+    "coverVariant": "luna"
+  },
+  {
+    "id": 2,
+    "name": "Bento",
+    "title": "Da cirurgia ao quintal",
+    "summary": "Passou por cirurgia e fisioterapia e hoje corre como se sempre tivesse pertencido ali.",
+    "adoptionDate": "2025-04-22",
+    "coverVariant": "bento"
+  },
+  {
+    "id": 3,
+    "name": "Nina",
+    "title": "A filhote medrosa virou dona da casa",
+    "summary": "Virou dona do sofa, da cama e do coracao da casa inteira.",
+    "adoptionDate": "2025-11-02",
+    "coverVariant": "nina"
+  }
+]

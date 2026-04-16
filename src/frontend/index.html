@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlorAnimal | ONG de resgate, adocao e cuidado</title>
+    <meta name="description" content="FlorAnimal e uma ONG dedicada ao resgate, recuperacao e adocao responsavel de caes e gatos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="site-loader" data-loader>
+        <div class="site-loader__cat" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p class="site-loader__text">FlorAnimal carregando cuidado</p>
+    </div>
+
+    <div class="cat-cursor" aria-hidden="true" data-cursor>
+        <span class="cat-cursor__icon">🐱</span>
+    </div>
+
+    <div class="helper-modal" id="paw-helper" aria-hidden="true">
+        <h3>Como ajudar hoje</h3>
+        <p>Escolha um caso urgente, doe via PIX ou abra o formulario de interesse para adotar. O site foi pensado para deixar cada acao mais clara e rapida.</p>
+        <button type="button" data-helper-close>Entendi</button>
+    </div>
+
+    <button class="floating-paw" type="button" aria-controls="paw-helper" aria-expanded="false" data-helper-toggle>
+        <span aria-hidden="true"><i class="fa-solid fa-paw"></i></span>
+    </button>
+
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="site-header__inner">
+                <a class="brand" href="#home">
+                    <span class="brand__badge"><i class="fa-solid fa-seedling"></i></span>
+                    <span>FlorAnimal</span>
+                </a>
+                <nav class="site-nav" aria-label="Principal">
+                    <a href="#home">Inicio</a>
+                    <a href="#urgentes">Urgentes</a>
+                    <a href="/pages/adotar/">Adotar</a>
+                    <a href="/pages/ajudar/">Ajudar</a>
+                    <a href="/pages/adotados/">Adotados</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="/pages/admin/">Admin</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" id="home">
+                <div class="hero__flora hero__flora--left" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="hero__flora hero__flora--right" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="hero__grid">
+                    <div class="hero__copy" data-reveal="left">
+                        <span class="eyebrow"><i class="fa-solid fa-leaf"></i> Resgate com acolhimento real</span>
+                        <h1>Um jardim de recome&ccedil;os para cada <span>pata</span>.</h1>
+                        <p class="hero__lead">A FlorAnimal conecta resgate, tratamento, doacoes urgentes e adocao responsavel em um unico lugar. A ideia aqui e transformar o site em algo vivo, emocional e facil para as donas da ONG usarem.</p>
+                        <div class="hero__actions">
+                            <a class="btn btn--primary" href="/pages/adotar/"><i class="fa-solid fa-heart"></i> Quero adotar</a>
+                            <a class="btn btn--ghost" href="/pages/ajudar/"><i class="fa-solid fa-hand-holding-heart"></i> Quero ajudar</a>
+                        </div>
+                        <div class="hero__stats">
+                            <div class="stat-chip">
+                                <strong>237</strong>
+                                <span>animais resgatados</span>
+                            </div>
+                            <div class="stat-chip">
+                                <strong>89</strong>
+                                <span>adocoes finalizadas</span>
+                            </div>
+                            <div class="stat-chip">
+                                <strong>12</strong>
+                                <span>casos urgentes ativos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero__visual" data-reveal="right">
+                        <div class="globe-stage">
+                            <div class="globe-stage__halo"></div>
+                            <div class="globe-stage__orb" data-globe>
+                                <div class="globe-stage__rings"></div>
+                            </div>
+                            <div class="globe-stage__caption">
+                                <strong>Fundo vivo, sem pesar a pagina</strong>
+                                <p>Usei um globo organico em vez da versao super pesada em JS. Ele entrega movimento e profundidade sem depender de varias libs externas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="urgentes">
+                <div class="container">
+                    <div class="section-heading" data-reveal>
+                        <div>
+                            <span class="section-chip">Casos urgentes</span>
+                            <h2>Quem precisa de ajuda agora</h2>
+                            <p>Esta area destaca tratamentos, cirurgias e necessidades imediatas. O visual chama atencao sem virar sensacionalismo, e a ONG pode trocar esses cards depois.</p>
+                        </div>
+                    </div>
+                    <div class="urgent-grid">
+                        <article class="urgent-card" data-reveal>
+                            <span class="urgent-card__badge">Atendimento imediato</span>
+                            <h3>Mel esta em recuperacao</h3>
+                            <p>Resgatada com infeccao de pele e desnutricao. Ja iniciou tratamento, mas ainda precisa de exames, medicamentos e apoio para hospedagem temporaria.</p>
+                            <div class="urgent-card__meta">
+                                <span class="pill"><i class="fa-solid fa-syringe"></i> medicacao</span>
+                                <span class="pill"><i class="fa-solid fa-house-chimney-medical"></i> lar temporario</span>
+                            </div>
+                        </article>
+                        <article class="urgent-card" data-reveal>
+                            <span class="urgent-card__badge">Cirurgia marcada</span>
+                            <h3>Chico precisa operar a pata</h3>
+                            <p>Ele ja saiu da rua, mas ainda manca bastante. A arrecadacao desta semana esta concentrada em exames, cirurgia ortopedica e fisioterapia.</p>
+                            <div class="urgent-card__meta">
+                                <span class="pill"><i class="fa-solid fa-stethoscope"></i> consulta</span>
+                                <span class="pill"><i class="fa-solid fa-bandage"></i> pos-operatorio</span>
+                            </div>
+                        </article>
+                        <article class="urgent-card" data-reveal>
+                            <span class="urgent-card__badge">Filhotes resgatados</span>
+                            <h3>Ninhada com acolhimento temporario</h3>
+                            <p>Os filhotes precisam de vermifugo, vacinas e itens basicos. Esta secao pode ficar ligada diretamente a um formulario de voluntariado e doacao.</p>
+                            <div class="urgent-card__meta">
+                                <span class="pill"><i class="fa-solid fa-pills"></i> remedios</span>
+                                <span class="pill"><i class="fa-solid fa-bowl-food"></i> racao e leite</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="adotar">
+                <div class="container">
+                    <div class="section-heading" data-reveal>
+                        <div>
+                            <span class="section-chip">Adocao responsavel</span>
+                            <h2>Animais esperando uma familia</h2>
+                            <p>Os cards foram pensados para receber fotos reais depois, mas ja estao com estrutura pronta para nome, porte, idade e acao principal.</p>
+                        </div>
+                    </div>
+                    <div class="animal-grid">
+                        <article class="animal-card" data-reveal>
+                            <div class="card-photo photo--margarida">MG</div>
+                            <div class="animal-card__body">
+                                <h3>Margarida</h3>
+                                <p>Femea, 2 anos, porte medio. Carinhosa, sociavel e pronta para uma casa tranquila.</p>
+                                <div class="animal-card__meta">
+                                    <span class="pill">cachorra</span>
+                                    <span class="pill">castrada</span>
+                                </div>
+                                <div class="animal-card__footer">
+                                    <strong>Perfil doce</strong>
+                                    <a class="btn btn--ghost" href="/pages/adotar/">Quero adotar</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="animal-card" data-reveal>
+                            <div class="card-photo photo--jasmim">JS</div>
+                            <div class="animal-card__body">
+                                <h3>Jasmim</h3>
+                                <p>Femea, 1 ano, porte pequeno. Curiosa, brincalhona e ideal para apartamento com telas.</p>
+                                <div class="animal-card__meta">
+                                    <span class="pill">gatinha</span>
+                                    <span class="pill">vacinada</span>
+                                </div>
+                                <div class="animal-card__footer">
+                                    <strong>Energia leve</strong>
+                                    <a class="btn btn--ghost" href="/pages/adotar/">Quero adotar</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="animal-card" data-reveal>
+                            <div class="card-photo photo--tomilho">TH</div>
+                            <div class="animal-card__body">
+                                <h3>Tomilho</h3>
+                                <p>Macho, 3 anos, porte medio. Companheiro, adora passeios e responde bem a rotina.</p>
+                                <div class="animal-card__meta">
+                                    <span class="pill">cachorro</span>
+                                    <span class="pill">vermifugado</span>
+                                </div>
+                                <div class="animal-card__footer">
+                                    <strong>Bom para familia</strong>
+                                    <a class="btn btn--ghost" href="/pages/adotar/">Quero adotar</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="animal-card" data-reveal>
+                            <div class="card-photo photo--lavanda">LV</div>
+                            <div class="animal-card__body">
+                                <h3>Lavanda</h3>
+                                <p>Femea, 4 meses. Uma filhote esperta que precisa de adaptacao cuidadosa e muito afeto.</p>
+                                <div class="animal-card__meta">
+                                    <span class="pill">filhote</span>
+                                    <span class="pill">em socializacao</span>
+                                </div>
+                                <div class="animal-card__footer">
+                                    <strong>Cheia de curiosidade</strong>
+                                    <a class="btn btn--ghost" href="/pages/adotar/">Quero adotar</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="ajudar">
+                <div class="container">
+                    <div class="section-heading" data-reveal>
+                        <div>
+                            <span class="section-chip">Como ajudar</span>
+                            <h2>Doar, acolher, voluntariar</h2>
+                            <p>Transformei a area de ajuda em algo mais estrategico: um bloco forte de PIX, um card de itens urgentes e outro para voluntariado e brecho solidario.</p>
+                        </div>
+                    </div>
+                    <div class="help-grid">
+                        <article class="help-card donation-box" data-reveal>
+                            <h3>Doacoes que viram tratamento</h3>
+                            <p>Cada contribuicao ajuda em consultas, cirurgias, transporte, vacinas, castracoes e resgates emergenciais.</p>
+                            <div class="donation-options">
+                                <button class="donate-btn" data-amount="20">R$ 20</button>
+                                <button class="donate-btn" data-amount="50">R$ 50</button>
+                                <button class="donate-btn" data-amount="100">R$ 100</button>
+                                <button class="donate-btn" data-amount="150">R$ 150</button>
+                            </div>
+                            <div class="donation-box__pix">
+                                <code>PIX: floranimal@ong.org</code>
+                                <code>CNPJ: 00.000.000/0001-00</code>
+                            </div>
+                        </article>
+                        <article class="help-card" data-reveal>
+                            <h3>Itens urgentes</h3>
+                            <p>Uma secao pronta para divulgar o que realmente falta esta semana e reduzir mensagens repetidas no WhatsApp.</p>
+                            <ul class="help-card__list">
+                                <li>racao para filhotes</li>
+                                <li>antibioticos e anti-inflamatorios</li>
+                                <li>tapetes higienicos e areia</li>
+                                <li>mantas, cobertores e caixas de transporte</li>
+                            </ul>
+                        </article>
+                        <article class="help-card" data-reveal>
+                            <h3>Rede de apoio</h3>
+                            <p>Voluntariado, brecho solidario, transporte e lar temporario podem entrar aqui com links e um formulario simples.</p>
+                            <ul class="help-card__list">
+                                <li>lar temporario com suporte da ONG</li>
+                                <li>motoristas para consultas e resgates</li>
+                                <li>apoio em eventos e campanhas</li>
+                                <li>brecho solidario nas redes sociais</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="adotados">
+                <div class="container">
+                    <div class="memory-book" data-reveal>
+                        <span class="section-chip">Album de adotados</span>
+                        <h2 class="memory-book__title">Historias que merecem ficar abertas</h2>
+                        <p class="memory-book__intro">Em vez de copiar o album em Vue do exemplo, montei uma base mais leve que combina com o resto do site e aceita fotos e relatos reais depois. O efeito 3D aparece no hover dos cards.</p>
+                        <div class="story-grid">
+                            <article class="story-card">
+                                <div class="card-photo photo--luna">LU</div>
+                                <div class="story-card__body">
+                                    <h3>Luna</h3>
+                                    <p>Chegou assustada, hoje dorme no sofa e acompanha a nova familia em todas as viagens.</p>
+                                    <span class="story-card__tag">adotada em 2025</span>
+                                </div>
+                            </article>
+                            <article class="story-card">
+                                <div class="card-photo photo--bento">BT</div>
+                                <div class="story-card__body">
+                                    <h3>Bento</h3>
+                                    <p>Foi resgatado com a pata machucada. Depois da cirurgia, ganhou casa, nome e rotina de carinho.</p>
+                                    <span class="story-card__tag">antes e depois</span>
+                                </div>
+                            </article>
+                            <article class="story-card">
+                                <div class="card-photo photo--nina">NN</div>
+                                <div class="story-card__body">
+                                    <h3>Nina</h3>
+                                    <p>Uma filhote medrosa que virou sombra da nova tutora. Esta area pode receber depoimentos completos.</p>
+                                    <span class="story-card__tag">final feliz</span>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="cta-strip">
+                            <div>
+                                <h3>Proximo passo natural</h3>
+                                <p>Depois a gente pode transformar isso em uma pagina dedicada com filtro por especie, antes/depois e um album de folhear mais teatral.</p>
+                            </div>
+                            <a class="btn btn--primary" href="/pages/adotados/">Ver album completo</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="sobre">
+                <div class="container">
+                    <div class="section-heading" data-reveal>
+                        <div>
+                            <span class="section-chip">Sobre a ONG</span>
+                            <h2>Feito para emocionar sem perder clareza</h2>
+                            <p>A base agora conversa com o que voce descreveu: resgate, adotados, ajuda urgente, futuro painel admin e uma identidade mais memoravel.</p>
+                        </div>
+                    </div>
+                    <div class="about-grid">
+                        <article class="about-card" data-reveal>
+                            <h3>Nossa historia</h3>
+                            <p>A FlorAnimal nasceu para acolher animais em situacoes de risco e criar caminhos de reabilitacao, visibilidade e adocao responsavel. O novo layout tenta mostrar esse cuidado em cada detalhe.</p>
+                            <div class="about-card__facts">
+                                <div><strong>Equipe voluntaria:</strong> estrutura pensada para destacar protetoras, parceiras e apoiadoras.</div>
+                                <div><strong>Foco visual:</strong> natureza, calor humano, urgencia quando precisa e leveza quando a historia floresce.</div>
+                            </div>
+                        </article>
+                        <article class="about-card" data-reveal>
+                            <h3>Base para o painel admin</h3>
+                            <p>O site ja esta organizado para ganhar uma area administrativa simples, onde as responsaveis poderao cadastrar animais, atualizar adotados e trocar os casos urgentes sem depender de codigo toda vez.</p>
+                            <div class="about-card__facts">
+                                <div><strong>Animais:</strong> adicionar, editar, remover e marcar como adotado.</div>
+                                <div><strong>Adotados:</strong> publicar historia, data, status e depoimento da familia.</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="contato">
+                <div class="container">
+                    <div class="section-heading" data-reveal>
+                        <div>
+                            <span class="section-chip">Fale com a ONG</span>
+                            <h2>Contato e interesse em adocao</h2>
+                            <p>Deixei o formulario pronto para continuar usando o JavaScript que voce ja tinha no projeto, sem quebrar o fluxo de envio.</p>
+                        </div>
+                    </div>
+                    <div class="contact-layout">
+                        <aside class="contact-panel" data-reveal="left">
+                            <h3>Vamos conversar</h3>
+                            <p>Se voce quer adotar, ajudar em um caso urgente, oferecer lar temporario ou apoiar o brecho, este e o ponto de entrada ideal.</p>
+                            <div class="contact-panel__card">
+                                <strong>WhatsApp</strong>
+                                <p>(11) 91234-5678</p>
+                            </div>
+                            <div class="contact-panel__card">
+                                <strong>E-mail</strong>
+                                <p>contato@floranimal.org</p>
+                            </div>
+                            <div class="contact-panel__card">
+                                <strong>Atendimento</strong>
+                                <p>Todos os dias, com prioridade para resgates e retorno de adotantes.</p>
+                            </div>
+                        </aside>
+                        <form class="contact-form" id="contactForm" data-reveal="right">
+                            <div class="field">
+                                <label for="name">Nome</label>
+                                <input id="name" type="text" name="name" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="field">
+                                <label for="email">E-mail</label>
+                                <input id="email" type="email" name="email" placeholder="voce@email.com" required>
+                            </div>
+                            <div class="field">
+                                <label for="topic">Assunto</label>
+                                <select id="topic" name="topic">
+                                    <option value="adocao">Quero adotar</option>
+                                    <option value="doacao">Quero doar</option>
+                                    <option value="voluntariado">Quero ser voluntario</option>
+                                    <option value="urgente">Tenho um caso urgente</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message" placeholder="Conte um pouco sobre o que voce precisa ou como quer ajudar." required></textarea>
+                            </div>
+                            <button class="btn btn--primary" type="submit">Enviar mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__card">
+                    <div>
+                        <strong>FlorAnimal</strong>
+                        <p>Resgate, recuperacao e adocao responsavel com identidade mais forte e pronta para crescer.</p>
+                    </div>
+                    <p>Desenvolvimento em evolucao com foco em beleza, clareza e manutencao simples.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

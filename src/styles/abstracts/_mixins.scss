@@ -1,0 +1,31 @@
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin card-hover {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 36px -12px rgba(195, 166, 209, 0.2);
+    border-color: $color-floral-pink;
+  }
+}
+
+@mixin button-base {
+  border-radius: 60px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}

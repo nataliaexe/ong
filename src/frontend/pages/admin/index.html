@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | FlorAnimal</title>
+    <meta name="description" content="Painel administrativo da FlorAnimal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a class="brand" href="/"><i class="fa-solid fa-seedling"></i> FlorAnimal</a>
+        <nav class="nav">
+            <a href="/">Inicio</a>
+            <a href="/pages/adotar/">Adotar</a>
+            <a href="/pages/ajudar/">Ajudar</a>
+            <a href="/pages/adotados/">Adotados</a>
+            <a href="/pages/admin/" aria-current="page">Admin</a>
+        </nav>
+    </header>
+
+    <main class="shell">
+        <section class="hero" data-reveal>
+            <span class="eyebrow">Acesso restrito</span>
+            <h1>Painel das donas da ONG para gerenciar pets e historias.</h1>
+            <p>Somente quem tiver email e senha consegue publicar, editar e remover conteudo. Os dados sao salvos no backend e ja aparecem nas paginas publicas.</p>
+        </section>
+
+        <section class="auth-card" id="loginCard" data-reveal>
+            <div>
+                <h2>Entrar no painel</h2>
+                <p>Use o email e a senha configurados no arquivo <code>.env</code>.</p>
+            </div>
+            <form id="loginForm" class="stack">
+                <input type="email" name="email" placeholder="Email admin" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <p class="feedback" id="loginFeedback"></p>
+            </form>
+        </section>
+
+        <section class="workspace hidden" id="workspace">
+            <div class="toolbar">
+                <div>
+                    <span class="eyebrow">Admin ativo</span>
+                    <h2 id="adminEmail">Painel conectado</h2>
+                </div>
+                <button class="secondary-btn" id="logoutBtn" type="button">Sair</button>
+            </div>
+
+            <div class="dashboard">
+                <article class="panel" data-reveal>
+                    <h3>Animais para adocao</h3>
+                    <form id="animalForm" class="stack compact">
+                        <input type="hidden" name="id">
+                        <input type="text" name="name" placeholder="Nome do animal" required>
+                        <select name="type" required><option value="dog">Cao</option><option value="cat">Gato</option></select>
+                        <input type="text" name="ageLabel" placeholder="Idade ex: 2 anos" required>
+                        <select name="size" required><option value="pequeno">Pequeno</option><option value="medio">Medio</option><option value="grande">Grande</option></select>
+                        <select name="gender" required><option value="femea">Femea</option><option value="macho">Macho</option></select>
+                        <select name="status" required><option value="available">Disponivel</option><option value="urgent">Urgente</option><option value="adopted">Adotado</option></select>
+                        <input type="text" name="coverVariant" placeholder="Capa ex: margarida" required>
+                        <input type="text" name="tags" placeholder="tags separadas por virgula" required>
+                        <textarea name="description" placeholder="Descricao" required></textarea>
+                        <div class="row-actions">
+                            <button type="submit">Salvar animal</button>
+                            <button class="secondary-btn" id="resetAnimal" type="button">Limpar</button>
+                        </div>
+                        <p class="feedback" id="animalFeedback"></p>
+                    </form>
+                </article>
+
+                <article class="panel" data-reveal>
+                    <div class="panel-head"><h3>Lista de animais</h3><span id="animalCount">0</span></div>
+                    <div class="list" id="animalsList"></div>
+                </article>
+            </div>
+
+            <div class="dashboard secondary-grid">
+                <article class="panel" data-reveal>
+                    <h3>Historias de adotados</h3>
+                    <form id="storyForm" class="stack compact">
+                        <input type="hidden" name="id">
+                        <input type="text" name="name" placeholder="Nome do animal" required>
+                        <input type="text" name="title" placeholder="Titulo da historia" required>
+                        <input type="text" name="adoptionDate" placeholder="Data ex: 2025-08-14" required>
+                        <input type="text" name="coverVariant" placeholder="Capa ex: luna" required>
+                        <textarea name="summary" placeholder="Resumo da historia" required></textarea>
+                        <div class="row-actions">
+                            <button type="submit">Salvar historia</button>
+                            <button class="secondary-btn" id="resetStory" type="button">Limpar</button>
+                        </div>
+                        <p class="feedback" id="storyFeedback"></p>
+                    </form>
+                </article>
+
+                <article class="panel" data-reveal>
+                    <div class="panel-head"><h3>Lista de historias</h3><span id="storyCount">0</span></div>
+                    <div class="list" id="storiesList"></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./page.js"></script>
+</body>
+</html>

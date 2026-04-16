@@ -1,0 +1,100 @@
+#main-header {
+  padding: 1.2rem 5%;
+  background: rgba(255, 247, 239, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid $color-floral-pink;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    i {
+      font-size: 2.4rem;
+      color: $color-floral-pink;
+      filter: drop-shadow(0 2px 6px rgba(247, 161, 196, 0.4));
+    }
+
+    span {
+      font-size: 1.9rem;
+      font-weight: 600;
+      font-family: $font-heading;
+      color: $color-green-deep;
+      letter-spacing: -0.5px;
+
+      i {
+        font-size: 1.4rem;
+        margin: 0 4px;
+        color: $color-floral-lavender;
+        filter: none;
+      }
+    }
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+    flex-wrap: wrap;
+
+    @include mobile {
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    li a {
+      text-decoration: none;
+      font-weight: 600;
+      color: $color-text-soft;
+      font-size: 1.1rem;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      i {
+        color: $color-floral-pink;
+        font-size: 1.1rem;
+      }
+
+      &:hover {
+        border-bottom-color: $color-floral-pink;
+        color: #1e2e1a;
+      }
+    }
+  }
+
+  .btn-header {
+    @include button-base;
+    background: $color-floral-green;
+    color: white;
+    padding: 10px 22px;
+    border: 1px solid #6f8f70;
+    box-shadow: 0 4px 10px rgba(127, 159, 128, 0.25);
+
+    i {
+      color: #fef9e6;
+    }
+
+    &:hover {
+      background: #6b8a6c;
+      box-shadow: 0 8px 16px rgba(74, 103, 65, 0.2);
+      transform: scale(1.02);
+    }
+  }
+}

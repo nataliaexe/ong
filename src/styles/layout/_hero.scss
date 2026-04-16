@@ -1,0 +1,114 @@
+.hero {
+  padding: 4rem 5% 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  background: linear-gradient(145deg, #fffaf5 0%, #f7efe8 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "❀ ✿ ❁ ✾ ✽";
+    position: absolute;
+    font-size: 6rem;
+    bottom: 0;
+    right: 0;
+    opacity: 0.08;
+    color: #b1a38b;
+    white-space: nowrap;
+    transform: rotate(-5deg);
+  }
+
+  .hero-text {
+    flex: 1 1 350px;
+    z-index: 2;
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.1;
+      color: #2f4b2f;
+      margin-bottom: 1.3rem;
+
+      i {
+        color: $color-floral-pink;
+        font-size: 3rem;
+      }
+
+      @include mobile {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #4d5e47;
+      margin-bottom: 2rem;
+      max-width: 550px;
+    }
+  }
+
+  .floral-divider {
+    width: 130px;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, $color-floral-pink 0px, $color-floral-pink 8px, transparent 8px, transparent 16px);
+    margin: 20px 0 25px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    @include button-base;
+    background: $color-floral-pink;
+    color: $color-text-dark;
+    padding: 14px 36px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 12px 20px -8px rgba(247, 161, 196, 0.5);
+    border: 1px solid #fbc1d8;
+
+    i {
+      color: #3f633a;
+    }
+
+    &:hover {
+      background: #fbb6d2;
+      box-shadow: 0 16px 24px -8px #eeb0c7;
+    }
+  }
+
+  .btn-outline {
+    @include button-base;
+    background: transparent;
+    border: 2px solid $color-floral-green;
+    color: $color-green-deep;
+    padding: 12px 30px;
+
+    &:hover {
+      background: $color-floral-green;
+      color: white;
+    }
+  }
+
+  .hero-image {
+    flex: 1 1 320px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%;
+      border: 5px solid $color-cream-warm;
+      box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05), -8px -8px 20px #fff4ea inset;
+      filter: saturate(1.05);
+    }
+  }
+}
